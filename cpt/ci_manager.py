@@ -239,7 +239,7 @@ class GitlabManager(GenericManager):
         return os.getenv("CI_COMMIT_SHA", None)
 
     def get_branch(self):
-        return os.getenv("CI_BUILD_REF_NAME", None)
+        return os.getenv("CI_COMMIT_REF_NAME", None)
 
     def is_pull_request(self):
         return os.getenv("CI_MERGE_REQUEST_ID", None)
